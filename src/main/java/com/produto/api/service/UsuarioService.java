@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import com.produto.api.entities.Usuario;
 import com.produto.api.repository.UsuarioRepository;
-import com.produto.api.utils.PasswordUtils;
 
 @Service
 public class UsuarioService {

@@ -1,7 +1,5 @@
 package com.produto.api.repository;
 
-import static org.junit.Assert.assertNotNull;
-
 import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.Optional;
@@ -11,8 +9,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.BDDMockito;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
@@ -30,7 +26,7 @@ public class ProdutoRepositoryTest {
 
 	@Before
 	public void setUp() throws Exception {
-		Produto produto = this.produtoRepository.save(this.obterProduto());
+		this.produtoRepository.save(this.obterProduto());
 	}
 
 	@After

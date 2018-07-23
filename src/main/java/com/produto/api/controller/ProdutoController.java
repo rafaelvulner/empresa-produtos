@@ -3,8 +3,6 @@ package com.produto.api.controller;
 import java.util.List;
 import java.util.Optional;
 
-import javax.websocket.server.PathParam;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -74,7 +72,7 @@ public class ProdutoController {
 			
 			result.addError(new ObjectError("Usuario:", "Usuario invalido"));
 			result.getAllErrors().forEach(error -> response.getErrors().add(error.getDefaultMessage()));			
-			return ResponseEntity.badRequest().body(response);
+			return ResponseEntity.status(404).body(response);
 		}
 		
 		
