@@ -1,7 +1,6 @@
 package com.produto.api.dtos;
 
 import java.util.List;
-import java.util.Optional;
 
 import com.produto.api.entities.Produto;
 
@@ -14,8 +13,6 @@ public class UsuarioDto {
 	private String usuario;
 	
 	private String senha;
-	
-	private Optional<Produto> produto = Optional.empty();
 	
 	private List<Produto> produtos;
 
@@ -51,14 +48,6 @@ public class UsuarioDto {
 		this.senha = senha;
 	}
 
-	public Optional<Produto> getProduto() {
-		return produto;
-	}
-
-	public void setProduto(Optional<Produto> produto) {
-		this.produto = produto;
-	}
-
 	public List<Produto> getProdutos() {
 		return produtos;
 	}
@@ -69,9 +58,11 @@ public class UsuarioDto {
 
 	@Override
 	public String toString() {
-		return "UsuarioDto [id=" + id + ", nome=" + nome + ", usuario=" + usuario + ", senha=" + senha + ", produto="
-				+ produto + ", produtos=" + produtos + "]";
+		return "UsuarioDto [id=" + id + ", nome=" + nome + ", usuario=" + usuario + ", senha=" + senha + ", produtos="
+				+ produtos + "]";
 	}
+
+	
 
 
 
