@@ -10,7 +10,6 @@ import com.produto.api.entities.Produto;
 @Repository
 public interface ProdutoRepository extends JpaRepository<Produto, Long>{
 	
-	Optional<Produto> findByCodProduto(Long ig);
-	
+	Optional<Produto> findByCodProduto(Long ig);	
 
 }

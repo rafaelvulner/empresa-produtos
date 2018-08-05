@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.produto.api.entities.Produto;
@@ -25,5 +27,10 @@ public class ProdutoService {
 	
 	public Optional<Produto> findByCodProduto(Long id){
 		return this.produtoRepository.findByCodProduto(id);
+	}
+	
+	public Page<Produto> findAll(Pageable pageRequest){
+		
+		return this.produtoRepository.findAll(pageRequest);
 	}
 }
